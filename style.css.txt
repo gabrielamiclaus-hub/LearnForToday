@@ -1,0 +1,153 @@
+/* ===== Variabile de culoare ===== */
+:root {
+    --crem: #FFF4D6;          /* culoare principală */
+    --gri-inchis: #344054;    /* culoare principală secundară */
+    --albastru: #5B8DEF;      /* accent - bara de sus */
+    --mov: #C9A7F5;           /* puncte / scoruri / iconițe */
+    --verde: #B8E986;         /* progres */
+    --turcoaz: #70D6C1;       /* butoane */
+    --turcoaz-hover: #5CC4AE;
+    --text: #000000;
+    --alb: #FFFFFF;
+    --radius: 20px;
+    --font: "Nunito", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+}
+
+/* ===== Resetare ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--crem);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Bara de sus ===== */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: var(--albastru);
+    box-shadow: 0 2px 8px rgba(52, 64, 84, 0.2);
+}
+
+.topbar__brand {
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
+    color: var(--text);
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--alb);
+    border: 2px solid var(--mov);
+    border-radius: 999px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.score__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--mov);
+}
+
+/* ===== Conținut principal ===== */
+#learn-for-today {
+    flex: 1;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 32px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    font-weight: 800;
+    color: var(--text);
+}
+
+/* ===== Bara de progres ===== */
+.progress {
+    width: 100%;
+    height: 14px;
+    background: rgba(52, 64, 84, 0.15);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress__bar {
+    height: 100%;
+    background: var(--verde);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+/* ===== Card central (mascotă / ilustrație) ===== */
+.card {
+    width: 100%;
+    min-height: 260px;
+    padding: 24px;
+    background: var(--alb);
+    border: 3px solid var(--gri-inchis);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 0 var(--gri-inchis);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Buton ===== */
+#start {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 24px;
+    font-family: var(--font);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text);
+    background: var(--turcoaz);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 var(--gri-inchis);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+}
+
+#start:hover { background: var(--turcoaz-hover); }
+
+#start:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 var(--gri-inchis);
+}
+
+#start:focus-visible {
+    outline: 3px solid var(--mov);
+    outline-offset: 3px;
+}
+
+/* ===== Mobil ===== */
+@media (max-width: 480px) {
+    .topbar { padding: 12px 16px; }
+    #learn-for-today { padding: 24px 16px 32px; gap: 20px; }
+    .card { min-height: 200px; }
+}

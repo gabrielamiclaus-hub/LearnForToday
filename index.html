@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn for today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bara de sus -->
+    <header class="topbar">
+        <span class="topbar__brand">Learn for today</span>
+        <div class="score" aria-label="Scor">
+            <svg class="score__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/>
+            </svg>
+            <span id="scor">0</span>
+        </div>
+    </header>
+
+    <main id="learn-for-today">
+        <h1>Learn for today</h1>
+
+        <!-- Progres -->
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress__bar" id="progres" style="width: 0%"></div>
+        </div>
+
+        <!-- Card central -->
+        <section id="continut" class="card">
+            <!-- Aici va sta ilustrația sau mascota -->
+        </section>
+
+        <button id="start">START JOC</button>
+    </main>
+
+</body>
+</html>
