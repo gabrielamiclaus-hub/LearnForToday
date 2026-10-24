@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn for today</title>
+    <title>Learn for today – Articolele în germană</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,32 +11,51 @@
 </head>
 <body>
 
-    <!-- Bara de sus -->
+    <!-- Antet site -->
     <header class="topbar">
-        <span class="topbar__brand">Learn for today</span>
+        <a class="topbar__brand" href="index.html">Learn for today</a>
         <div class="score" aria-label="Scor">
-            <svg class="score__icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/>
-            </svg>
-            <span id="scor">0</span>
+            <svg class="score__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <span id="scor">0</span> p
         </div>
     </header>
 
     <main id="learn-for-today">
-        <h1>Learn for today</h1>
 
-        <!-- Progres -->
-        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="progress__bar" id="progres" style="width: 0%"></div>
-        </div>
-
-        <!-- Card central -->
-        <section id="continut" class="card">
-            <!-- Aici va sta ilustrația sau mascota -->
+        <!-- Pagina de start -->
+        <section id="pagina-start" class="hero">
+            <svg class="mascot" viewBox="0 0 120 110" role="img" aria-label="Mascota">
+                <ellipse cx="60" cy="100" rx="34" ry="7" fill="#344054" opacity=".12"/>
+                <path d="M60 8c28 0 48 22 48 52 0 26-18 40-48 40S12 86 12 60C12 30 32 8 60 8z" fill="#C9A7F5" stroke="#344054" stroke-width="3"/>
+                <circle cx="44" cy="52" r="7" fill="#fff" stroke="#344054" stroke-width="2.5"/><circle cx="76" cy="52" r="7" fill="#fff" stroke="#344054" stroke-width="2.5"/>
+                <circle cx="46" cy="53" r="3" fill="#344054"/><circle cx="74" cy="53" r="3" fill="#344054"/>
+                <path d="M48 72q12 11 24 0" fill="none" stroke="#344054" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <h1>Der, die sau das?</h1>
+            <p class="intro">Alege articolul potrivit pentru fiecare substantiv german. Primești 10 puncte pentru fiecare răspuns corect, iar întrebările greșite revin la final.</p>
+            <button id="start" class="btn">START</button>
         </section>
 
-        <button id="start">START JOC</button>
+        <!-- Quiz -->
+        <section id="quiz" class="card" hidden>
+            <div class="progress" role="progressbar" aria-label="Progres" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress__bar" id="progres"></div>
+            </div>
+            <h2 id="intrebare"></h2>
+            <div id="variante" class="options"></div>
+            <p id="feedback" class="feedback" role="status"></p>
+        </section>
+
+        <!-- Rezultat final -->
+        <section id="rezultat" class="card" hidden>
+            <h2>Quiz terminat!</h2>
+            <p class="final" id="scor-final"></p>
+            <button id="restart" class="btn">Joacă din nou</button>
+        </section>
     </main>
 
+    <footer class="footer">Învață ceva nou în fiecare zi.</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
