@@ -1,4 +1,4 @@
-:root {
+ :root {
     --crem: #FFF4D6;
     --gri: #344054;
     --albastru: #5B8DEF;
@@ -57,8 +57,8 @@ h1 { margin: 10px 0; font-size: 2.2rem; color: var(--gri); }
     color: var(--gri);
     border: 3px solid var(--gri);
     border-radius: 14px;
-    padding: 14px 44px;
-    font-size: 1.2rem;
+    padding: 14px 28px;
+    font-size: 1.1rem;
     font-weight: 800;
 }
 .btn:hover { background: var(--verde); }
@@ -72,13 +72,28 @@ h1 { margin: 10px 0; font-size: 2.2rem; color: var(--gri); }
     padding: 24px;
     text-align: center;
 }
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0 0 18px;
+    color: var(--gri);
+    font-weight: 800;
+}
+.timer__label { font-size: 1rem; }
+.timer__value { font-size: 1.8rem; min-width: 2ch; }
+.timer__unit { font-size: 1rem; }
+.timer__value--warning { color: var(--err); }
+.question-count { margin: 0 0 12px; color: var(--gri); font-weight: 800; }
+
 .progress {
     height: 20px;
     background: var(--crem);
     border: 3px solid var(--gri);
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 .progress__bar { width: 0; height: 100%; background: var(--mov); transition: width .4s; }
 h2 { margin: 0 0 24px; font-size: 1.5rem; color: var(--gri); }
@@ -98,9 +113,10 @@ h2 { margin: 0 0 24px; font-size: 1.5rem; color: var(--gri); }
 .option--ok { background: var(--verde) !important; }
 .option--err { background: #f6b3cb !important; }
 
-.feedback { min-height: 2em; margin: 22px 0 0; font-size: 1.4rem; font-weight: 800; }
+.feedback { min-height: 2em; margin: 18px 0 12px; font-size: 1.25rem; font-weight: 800; }
 .feedback--ok { color: var(--ok); }
 .feedback--err { color: var(--err); }
+.next-btn { margin-top: 6px; }
 .final { font-size: 1.4rem; font-weight: 800; color: var(--mov-d); margin: 0 0 24px; }
 
 .footer {
@@ -115,6 +131,8 @@ h2 { margin: 0 0 24px; font-size: 1.5rem; color: var(--gri); }
 @media (max-width: 420px) {
     .options { gap: 8px; }
     h1 { font-size: 1.8rem; }
+    .card { padding: 18px; }
+    .timer { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
